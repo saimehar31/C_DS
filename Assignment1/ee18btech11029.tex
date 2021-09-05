@@ -1,0 +1,221 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+% \providecommand{\abs}[1]{\left\vert#1\right\vert}
+% \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+% %\providecommand{\norm}[1]{\lVert#1\rVert}
+% \providecommand{\mtx}[1]{\mathbf{#1}}
+% \providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{M Sai Mehar - EE18BTECH11029}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all Codes from 
+%
+\begin{lstlisting}
+https://github.com/saimehar31/C_DS/assignment1/codes
+\end{lstlisting}
+Download all latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/saimehar31/C_DS/assignment1/ee18btech11029.tex
+\end{lstlisting}
+\section{Problem}
+(Q 4) In 16-bit 2's complement representation,the decimal number -28 is:  
+\section{Solution}
+
+\newline
+\textbf{Explanation}
+\newline
+The binary representation of +28 is \\
+\begin{equation}
+    0000\,0000\,0001\,1100
+\end{equation}
+Function for finding the binary representation of number
+ \begin{lstlisting}
+void decToBinary(int n)
+{
+    int binary[16] = {0}, i = 0;
+    while (n > 0) {
+        binary[i++] = n % 2;
+        n /= 2;
+    }
+
+    //Binary Representation of Number
+    for (int j = 15; j >= 0; j--)
+        cout << binary[j];
+}
+
+\end{lstlisting}
+In order to find 2's complement of a number we need to find 1's complement and add 1 to it.
+1's complement of a number is found by inverting each bit in decimal representation of number.\\
+1's complement representation of +28 is given as
+\begin{equation}
+    1111\,1111\,1110\,0011 
+\end{equation}
+\\
+\\
+\\
+Function for finding 1's complement of number
+\begin{lstlisting}
+void onecomplement(int binary[])
+{
+    // Finding one's complement of the number
+    for (int k = 15; k >= 0; k--)
+    {
+        binary[k] = !binary[k];
+    }
+    //Binary representation of 1's complement
+    for (int j = 15; j >= 0; j--)
+        cout << binary[j];
+}
+\end{lstlisting}
+2's complement representation is given as
+\begin{equation}
+    1111\,1111\,1110\,0100
+\end{equation}
+\begin{lstlisting}
+void twocomplement(int binary[])
+{
+    // finding two complement of a number
+    int carry = 1;
+    for (int k = 0; k <= 15; k++)
+    {
+        if (binary[k] == 1 and carry == 1)
+            binary[k] = 0;
+        else if (binary[k] == 0 and carry == 1) 
+        {
+            binary[k] = 1;
+            carry = 0;
+        }
+    }
+    //binary representation of 2's complement
+    for (int j = 15; j >= 0; j--)
+        cout << binary[j];
+}
+\end{lstlisting}
+Hence in 2's complement representation, the decimal number -28 is given as
+\begin{equation}
+    1111\,1111\,1110\,0100
+\end{equation}
+
+\end{document}

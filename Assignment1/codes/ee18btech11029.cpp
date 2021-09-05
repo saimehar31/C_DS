@@ -10,7 +10,6 @@ void twocomplement(int binary[])
     /*
         It is usually found by adding 1 to one's complement.
     */
-    string s;
     int carry = 1;
     for (int k = 0; k <= 15; k++)
     {
@@ -22,11 +21,8 @@ void twocomplement(int binary[])
         }
     }
     for (int j = 15; j >= 0; j--) {
-        s += binary[j];
         cout << binary[j];
     }
-    // int number = stoi(s);
-    convertBinaryToDecimal( 1111111111100100);
 
 }
 

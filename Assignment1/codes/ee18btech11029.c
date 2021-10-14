@@ -57,6 +57,7 @@ void decToBinary(int n)
 int main()
 {
     int n;
+    int k;
     scanf("%d",&n);
     decToBinary(n);
 }

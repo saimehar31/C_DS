@@ -1,8 +1,4 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define int long long
-#define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-
+#include <stdio.h>
 
 void twocomplement(int binary[])
 {
@@ -13,19 +9,19 @@ void twocomplement(int binary[])
     int carry = 1;
     for (int k = 0; k <= 15; k++)
     {
-        if (binary[k] == 1 and carry == 1)
+        if (binary[k] == 1 && carry == 1)
             binary[k] = 0;
-        else if (binary[k] == 0 and carry == 1) {
+        else if (binary[k] == 0 && carry == 1) {
             binary[k] = 1;
             carry = 0;
         }
     }
+    printf("2's complement of number is:");
     for (int j = 15; j >= 0; j--) {
-        cout << binary[j];
+        printf("%d",binary[j]);
     }
-
+    printf("\n");
 }
-
 
 void onecomplement(int binary[])
 {
@@ -35,8 +31,10 @@ void onecomplement(int binary[])
         binary[k] = !binary[k];
     }
     //Binary representation of 1's complement of number
+    printf("1's complement of number is:");
     for (int j = 15; j >= 0; j--)
-        cout << binary[j];
+        printf("%d",binary[j]);
+    printf("\n");
     twocomplement(binary);
 }
 
@@ -48,18 +46,18 @@ void decToBinary(int n)
         binary[i++] = n % 2;
         n /= 2;
     }
-
+    printf("Binary Representation of Number:");
     //Binary Representation of Number
     for (int j = 15; j >= 0; j--)
-        cout << binary[j];
-
-    //onecomplement(binary);
+        printf("%d",binary[j]);
+    printf("\n");
+    onecomplement(binary);
 }
 
-int32_t main()
+int main()
 {
     int n;
-    cin >> n;
+    scanf("%d",&n);
     decToBinary(n);
 }
 
